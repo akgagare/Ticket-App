@@ -22,3 +22,26 @@ export async function GET(){
         return NextResponse.json({message:"Error Came Arun",error},{status:500});
     }
 }
+
+export async function DELETE(req){
+    try{
+        const {id}=req.query;
+        const result = await Ticket.deleteOne({ _id: id });
+        if (result.deletedCount === 0) {
+            return NextResponse.json({ message: 'Ticket not found' }, { status: 404 });
+        }
+      
+        return NextResponse.json({ message: 'Ticket deleted successfully' }, { status: 200 });
+      
+    }catch(error){
+        return NextResponse.json({message:"Error Came Arun,for deleting operation",error},{status:500});
+    }
+}
+
+export async function PUT(req){
+    try{
+
+    }catch(error){
+        return NextResponse.json({message:"Error in editing ",error},{status:500});
+    }
+}

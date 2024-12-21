@@ -80,9 +80,9 @@ const TicketForm = () => {
                     onChange={handleChange}
                     value={formdata.category}
                 >
-                    <option value="hardware_problem">HardWare Problem</option>
-                    <option value="software_problem">SoftWare Problem</option>
-                    <option value="project_management_problem">Project Management Problem</option>
+                    <option value="Hardware_problem">HardWare Problem</option>
+                    <option value="Software_problem">SoftWare Problem</option>
+                    <option value="Project_management_problem">Project Management Problem</option>
                 </select>
 
                 <div className='flex gap-2'>
